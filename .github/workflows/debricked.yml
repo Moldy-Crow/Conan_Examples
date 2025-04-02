@@ -15,7 +15,7 @@ jobs:
           python -m pip install -U conan
           python -m pip install cyclonedx-conan
     - name: Generate Conan SBOM
-      run: cyclonedx-conan conanfile.txt > sbom.json # Update the path here if necessary
+      run: cyclonedx-conan conanfile.py > sbom.json # Update the path here if necessary
     - uses: debricked/actions@v4
       env:
         DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
